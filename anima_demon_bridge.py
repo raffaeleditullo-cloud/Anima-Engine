@@ -12,9 +12,16 @@ import time
 from typing import List, Dict, Any, Optional
 
 # Add DEMON engine path if present on machine
-demon_path = r"c:\Users\stree\Desktop\DEMON"
-if os.path.exists(demon_path) and demon_path not in sys.path:
-    sys.path.insert(0, demon_path)
+candidate_paths = [
+    r"c:\Users\stree\Desktop\Demon-Engine",
+    r"c:\Users\stree\Desktop\DEMON",
+    os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "Demon-Engine")),
+    os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "DEMON")),
+]
+for dp in candidate_paths:
+    if os.path.exists(dp) and dp not in sys.path:
+        sys.path.insert(0, dp)
+        break
 
 from anima_engine import AnimaEngine, AnimaBranch
 
