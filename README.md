@@ -166,5 +166,20 @@ Results on Windows 11 (AMD Ryzen 9 / RTX 5060):
 
 ---
 
+## 🏛️ LE ESTENSIONI OPERATIVE DI ANIMA: DAEDALUS & ARIADNE
+
+ANIMA calcola l'intento e la geodetica di minima azione.  
+Include due potenti estensioni operative integrate per la navigazione complessa:
+
+### 1. 🏛️ Estensione DAEDALUS (`daedalus_engine.py`, `daedalus_mcp.py`)
+* **Ruolo**: La Bussola Geodetica Anti-Loop.
+* **Funzione**: Controlla in anticipo che ogni traiettoria mantenga sempre una via di fuga aperta. Risolve labirinti complessi, impedendo all'AI di girare a vuoto o incagliarsi in vicoli ciechi.
+
+### 2. 🧵 [Estensione ARIADNE](./POTENZIAMENTO_DAEDALUS_ARIADNE.md) (Directional Hysteresis Lock)
+* **Ruolo**: Soppressione del *Relay Chattering*.
+* **Funzione**: Blocca la decisione di rotta per una finestra temporale invariante ($\tau = 1.6\text{s}$). Elimina le oscillazioni ad alta frequenza (60Hz) causate da shock ambientali o finte esche avversarie, portando a termine la geodetica senza esitazioni.
+
+---
+
 ## 📄 License
 MIT License. Developed by Raffaele Di Tullo.
